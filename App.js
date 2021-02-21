@@ -6,11 +6,15 @@ import A1 from './src/components/A1';
 import A2 from './src/components/A2';
 import B1 from './src/components/B1';
 import B2 from './src/components/B2';
+import CustomHeader from './src/components/CustomHeader';
 
 const Stack = createStackNavigator();
 
 const BStack = () => (
-  <Stack.Navigator>
+  <Stack.Navigator
+    screenOptions={{
+      headerShown: false,
+    }}>
     <Stack.Screen
       name="B1"
       component={B1}
@@ -26,7 +30,10 @@ const BStack = () => (
 
 const App = () => (
   <NavigationContainer>
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        header: CustomHeader,
+      }}>
       <Stack.Screen
         name="A1"
         component={A1}

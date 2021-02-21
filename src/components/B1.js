@@ -6,9 +6,9 @@ const B1 = ({navigation}) => {
     const rootNavigation = navigation.dangerouslyGetParent();
 
     if (typeof rootNavigation !== 'undefined') {
-      // Hide the header of the root navigation stack.
+      // Change the title of the root navigation header
       rootNavigation.setOptions({
-        headerShown: false,
+        title: 'B1 Component: B1',
       });
     }
   }, [navigation]);
